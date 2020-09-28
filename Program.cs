@@ -13,6 +13,10 @@ namespace Games
         string choosenGame = Console.ReadLine();
 
         EletronicGames eletronicgames = null;
+        /** Cuidado com falta de indentação no If também. O certo seria:
+        if (choosenGame == "Fifa")
+            eletronicgames = new Fifa();
+        **/
         if (choosenGame == "Fifa")
         eletronicgames = new Fifa();
         

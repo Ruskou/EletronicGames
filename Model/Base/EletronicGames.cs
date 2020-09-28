@@ -3,6 +3,8 @@ using System;
 
 namespace Games.Model.Base {
 
+    //Geralmente a gente não nomeia no plural essas classes que representam objetos. 
+    //Sendo ssim, acho que ficaria melhor chamar essa classe de "EletronicGame". 
     public abstract class EletronicGames {
 
         #region Properties
@@ -18,6 +20,8 @@ namespace Games.Model.Base {
 
         #region Behaviors
 
+        //Lembra que métodos costumam ser nomeados no infinitivo. Portanto, esse método seria 
+        //Create, o outro Acquire, o outro Start, e assim por diante.
         public void Created(){    
         Console.WriteLine($"The game {Name} of type {Type} is created with {Memory} Gigs!");  // The game name, type and memory
         } 
@@ -27,6 +31,15 @@ namespace Games.Model.Base {
         public void Started(){    
         Console.WriteLine($"The game {Name} Started with the aim of {Objective}!");  // The game Started with objective
         }
+
+        /**Muita atenção na indentação, sem ela seu código fica pouco legível. Esse método, por exemplo, ficaria:
+        public void Played()
+        {     
+            Console.WriteLine($"The game {Name} is played by someone!");
+        }
+
+        Isso se aplica aos demais métodos e a boa parte do código.
+        **/
 
         public void Played(){     // The game is played by someone
         Console.WriteLine($"The game {Name} is played by someone!");
@@ -38,9 +51,6 @@ namespace Games.Model.Base {
          
         
         #endregion
-
-
-
     }
 }
 
